@@ -33,12 +33,12 @@
 
             <Button
                 Text="JugadorView"
-                Clicked="Button_Clicked"
+                Clicked="JugadorBtn_Clicked"
                 HorizontalOptions="Fill" />
-            <!--<Button
+            <Button
                 Text="LigaView"
-                Clicked="Button_Clicked_1"
-                HorizontalOptions="Fill" />-->
+                Clicked="LigaBtn_Clicked_1"  
+                HorizontalOptions="Fill" />
         </VerticalStackLayout>
     </ScrollView>
 

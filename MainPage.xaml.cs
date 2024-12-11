@@ -2,6 +2,7 @@
 using FutbolNet.Class;
 using FutbolNet.ViewModels;
 using FutbolNet.Views.Jugadores;
+using FutbolNet.Views.Ligas;
 
 namespace FutbolNet
 {
@@ -33,19 +34,32 @@ namespace FutbolNet
             {
                 await Navigation.PopAsync();
             }
+            if (m.Value == "AbrirAddEditLigaView")
+            {
+                await Navigation.PushAsync(new AddEditLigaView(m.Liga));
+            }
+            else if (m.Value == "AbrirLigas")
+            {
+                await Navigation.PushAsync(new LigaView());
+            }
+            else if (m.Value == "VolverALigas")
+            {
+                await Navigation.PopAsync();
+            }
         }
 
-        private async void Button_Clicked(object sender, EventArgs e)
+        private async void JugadorBtn_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new JugadorView());
 
 
         }
 
-        //private async void Button_Clicked_1(object sender, EventArgs e)
-        //{
-        //    await Navigation.PushAsync(new ());
-        //}
+        private async void LigaBtn_Clicked_1(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new LigaView());
+
+        }
     }
 }
 
